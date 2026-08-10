@@ -1,0 +1,5 @@
+indicator_type,indicator,assessment,confidence,recommended_action
+sender_email,security-alert@example-mail[.]test,malicious,high,block sender if appropriate
+originating_ip,192.0.2.44,suspicious,medium,review telemetry before blocking
+url,hxxps://account-review[.]example/login,malicious,high,block URL
+domain,account-review[.]example,malicious,high,block domain
