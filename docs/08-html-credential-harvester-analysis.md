@@ -37,7 +37,7 @@ The investigation focused on the following questions:
 
 The suspicious attachment was located in the lab environment and its file properties were reviewed to identify the complete filename and file type.
 
-**Observed attachment:** `MICRO.html`
+**Observed attachment:** `MICROINV-US1070822.html`
 
 The `.html` extension identifies the attachment as an HTML document capable of rendering web content locally in a browser. In the context of a phishing investigation, HTML attachments require careful examination because they can contain forms, scripts, redirects, or other content designed to imitate legitimate websites and collect user information.
 
@@ -48,7 +48,7 @@ At this stage, the file type alone does not establish malicious intent. The atta
 
 ![HTML attachment SHA256](../evidence/screenshots/html-credential-harvester/02-html-attachment-sha256.png)
 
-PowerShell was used to calculate the SHA256 hash of the suspicious `MICRO.html` attachment. The `Get-FileHash` cmdlet was executed against the file, using its default SHA256 hashing algorithm.
+PowerShell was used to calculate the SHA256 hash of the suspicious `MICROINV-US1070822.html` attachment. The `Get-FileHash` cmdlet was executed against the file, using its default SHA256 hashing algorithm.
 
 **SHA256:**
 
@@ -63,7 +63,7 @@ The hash itself does not determine whether the attachment is malicious. It serve
 
 ![HTML attachment file size](../evidence/screenshots/html-credential-harvester/03-html-attachment-file-size.png)
 
-The file properties of `MICRO.html` were reviewed to collect additional metadata about the suspicious attachment.
+The file properties of `MICROINV-US1070822.html` were reviewed to collect additional metadata about the suspicious attachment.
 
 **Observed file size:** `14.6 KB`
 
@@ -76,7 +76,7 @@ File size alone does not indicate whether a file is malicious. It should be cons
 
 ![Microsoft login impersonation](../evidence/screenshots/html-credential-harvester/04-microsoft-login-impersonation.png)
 
-The `MICRO.html` attachment was opened within the controlled lab environment to examine the web page presented to the potential victim.
+The `MICROINV-US1070822.html` attachment was opened within the controlled lab environment to examine the web page presented to the potential victim.
 
 **Impersonated service:** `Microsoft Outlook / Office 365`
 
