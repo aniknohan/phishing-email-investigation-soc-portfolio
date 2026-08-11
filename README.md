@@ -20,6 +20,20 @@ Finally, the collected evidence is used to document incident classification, IOC
 The goal is to demonstrate an evidence-driven SOC investigation workflow while clearly distinguishing between actions performed in the lab and response actions that would be recommended in a production environment.
 
 
+## Tools & Technologies
+
+The investigation used a combination of email-analysis, operating-system, browser, and threat-analysis tools to collect and examine phishing artifacts.
+
+- **Sublime Text** — Reviewed raw `.eml` files, email headers, URLs, attachment metadata, and HTML source code.
+- **Mozilla Thunderbird** — Opened email samples and reviewed message content and attachment information.
+- **Windows PowerShell** — Calculated cryptographic file hashes using `Get-FileHash`.
+- **DomainTools** — Investigated sending IP addresses and reviewed reverse DNS / hostname information.
+- **CyberChef** — Decoded and transformed encoded URL and web artifacts during analysis.
+- **Google Chrome Developer Tools** — Inspected HTML credential-harvester network activity and captured the credential-submission request.
+- **Windows File Properties** — Reviewed attachment file type, extension, and file-size metadata.
+- **MITRE ATT&CK** — Mapped observed phishing behavior to relevant adversary tactics and techniques.
+- **GitHub** — Documented investigation methodology, evidence, findings, IOCs, and incident-response recommendations.
+
 ## Objectives
 
 - Triage the message without directly interacting with suspicious content.
