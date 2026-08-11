@@ -197,6 +197,10 @@ Evidence from the HTML attachment investigation includes:
 
 **[View HTML Credential Harvester Evidence →](evidence/screenshots/html-credential-harvester/)**
 
+### Evidence Status
+
+Supporting screenshots and investigation artifacts have been added to the repository and organized by investigation type. The evidence is referenced throughout the technical documentation to support the findings and demonstrate the analysis process.
+
 ### Evidence Handling
 
 Potentially malicious URLs are defanged in the written documentation where appropriate. Screenshots are used to demonstrate the investigation process without publishing active malicious content for execution.
