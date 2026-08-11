@@ -217,3 +217,18 @@ The raw `.eml` file was reviewed in Sublime Text and the `Subject` field was loc
 The subject line presents the message as an invoice and includes a specific invoice number. This information was recorded as an email artifact because subject lines can provide useful context about the sender's pretext and can also be used when searching for related messages during an investigation.
 
 The subject alone does not establish malicious intent and should be correlated with the sender, recipient, sending infrastructure, message content, and attachment analysis.
+
+
+#### Date and Time
+
+![Email 2 date and time](../evidence/screenshots/manual-artifact-collection/12-email2-date-time.png)
+
+The raw `.eml` file was reviewed in Sublime Text and the `Date` field was located to determine the date and time associated with the message.
+
+**Observed header value:** `Sun, 24 May 2020 15:21:13 +0100`
+
+**Recorded date/time:** `24 May 2020 15:21:13`
+
+The timestamp was recorded as part of the email metadata. Preserving the original time-zone offset (`+0100`) is useful during an investigation because timestamps may need to be normalized and correlated with other email, authentication, network, or endpoint events.
+
+This artifact helps establish the message timeline and can support correlation with other activity associated with the email.
