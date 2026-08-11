@@ -130,3 +130,83 @@ The incident scope should be updated as additional evidence is collected.
 The available lab evidence confirms the malicious behavior of the phishing content, but it does not establish that real production credentials were compromised or that additional organizational users were affected. Therefore, broader organizational impact should not be assumed without supporting telemetry.
 
 **Current Scope:** Confirmed malicious phishing artifact; broader user or account compromise not established from the available lab evidence.
+
+
+---
+
+## 3. Containment Actions
+
+Once the phishing activity has been confirmed as malicious and the potential scope has been assessed, containment actions should be taken to reduce the risk of additional users interacting with the phishing content.
+
+### Email Containment
+
+Search the email environment for messages associated with the phishing campaign and remove confirmed malicious messages from affected mailboxes where organizational tooling permits.
+
+Relevant indicators can include:
+
+- Sender address.
+- Subject line.
+- Malicious URLs or domains.
+- Attachment filename.
+- Attachment hash.
+
+Mail-security controls should also be updated where appropriate to prevent matching phishing messages from being delivered to additional users.
+
+### Network Containment
+
+Confirmed malicious network indicators should be submitted to the appropriate security controls for blocking according to organizational policy.
+
+For the HTML credential-harvesting activity, the identified domain is:
+
+`alia[.]typentfs[.]xyz`
+
+Potential containment controls include:
+
+- DNS filtering.
+- Secure web gateway filtering.
+- Proxy blocklists.
+- Firewall or network security controls.
+
+Blocking the identified infrastructure can help prevent users or systems from communicating with the credential-collection destination.
+
+### Attachment Containment
+
+The identified malicious HTML attachment should be prevented from reaching additional users.
+
+**Filename:**
+
+`MICROINV-US1070822.html`
+
+**SHA256:**
+
+`0FC57290189ADECFE17F6BACBC515ED080CD63C54B282FDEF4EF3DFC598CDD1E`
+
+Where supported, email-security and endpoint-security tools can use the attachment hash or other file characteristics to identify and quarantine matching artifacts.
+
+The malicious attachment should not be executed or opened on production systems during investigation.
+
+### Account Containment
+
+If investigation determines that a user submitted credentials to the phishing page, the affected account should be treated as potentially compromised.
+
+Appropriate containment actions may include:
+
+- Resetting the affected user's password.
+- Revoking active authentication sessions.
+- Reviewing or resetting authentication factors where compromise is suspected.
+- Reviewing recent account activity for unauthorized access.
+- Temporarily restricting the account if required by organizational policy.
+
+Account actions should be based on evidence collected during scoping rather than assuming that every recipient submitted credentials.
+
+### Endpoint Containment
+
+If a user opened a suspicious attachment or additional evidence suggests endpoint compromise, the affected system should be investigated using available endpoint telemetry.
+
+If malicious execution or additional compromise is identified, isolation of the endpoint may be required to prevent further communication or lateral activity.
+
+### Containment Status
+
+The lab evidence identifies malicious phishing artifacts and credential-harvesting behavior. The actions described above represent appropriate SOC containment recommendations.
+
+Because the lab does not provide access to a production email gateway, firewall, identity platform, or endpoint detection system, these containment actions are documented as **recommended response actions** rather than actions performed against a real production environment.
