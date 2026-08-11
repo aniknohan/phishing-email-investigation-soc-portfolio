@@ -66,13 +66,15 @@ This workflow emphasizes evidence-based analysis. Findings are based on artifact
 ## Repository Structure
 
 ```text
-.
+phishing-email-investigation-soc-portfolio/
+│
 ├── README.md
-├── .gitignore
 ├── LICENSE
+│
 ├── data/
 │   ├── artifact-worksheet.md
 │   └── iocs.csv
+│
 ├── docs/
 │   ├── 01-investigation-methodology.md
 │   ├── 02-artifact-collection.md
@@ -81,12 +83,15 @@ This workflow emphasizes evidence-based analysis. Findings are based on artifact
 │   ├── 05-final-incident-report.md
 │   ├── 06-email-analysis-demo.md
 │   ├── 07-mitre-attack-mapping.md
+│   ├── 08-html-credential-harvester-analysis.md
+│   ├── 09-incident-response-and-remediation.md
 │   └── screenshot-guide.md
+│
 └── evidence/
     ├── email-samples/
-    │   └── README.md
     └── screenshots/
-        └── README.md
+        ├── manual-artifact-collection/
+        └── html-credential-harvester/
 ```
 
 ## Tools Demonstrated
