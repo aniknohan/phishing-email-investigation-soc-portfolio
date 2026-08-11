@@ -160,3 +160,19 @@ The email was reviewed to identify the destination of the embedded hyperlink. Th
 The URL was recorded as an investigation artifact for further analysis. The path contains `NetflixLogin.php`, which is consistent with a page designed to imitate a Netflix login workflow. This observation should be correlated with the sender information, domain analysis, and other indicators before reaching a final verdict.
 
 For safe documentation, the URL has been defanged by replacing `https` with `hxxps` and periods in the domain with `[.]`.
+
+
+#### Root Domain Identification
+
+![Email 1 root domain](../evidence/screenshots/manual-artifact-collection/08-email1-root-domain.png)
+
+After extracting the URL from the email, the URL structure was reviewed to identify the root domain.
+
+**Observed URL (defanged):**  
+`hxxps://www[.]thiswouldbeamalicioussite[.]com/index/2020/j411/NetflixLogin[.]php`
+
+**Root domain:** `thiswouldbeamalicioussite[.]com`
+
+The root domain was separated from the remaining URL path so it could be used as an individual investigation artifact. Identifying the root domain allows the analyst to perform additional enrichment such as WHOIS/RDAP, DNS, reputation, and threat-intelligence checks without relying only on the complete URL.
+
+The domain has been defanged in this documentation to prevent accidental navigation.
