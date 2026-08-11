@@ -118,6 +118,17 @@ The subject attempts to create concern by warning the recipient about suspicious
 
 The raw `.eml` file was reviewed and the `Date` field was located to identify when the message was sent.
 
-**Observed date/time:** `Sun, 3 May 2020 19:20:58 +0100`
+**Observed date/time:** `Sun, 3 May 2020 19:20:54 +0100`
 
 The timestamp was recorded as part of the email metadata. Recording the message date and time helps establish the investigation timeline and can be correlated with other email, authentication, network, or endpoint activity.
+
+
+#### Sender IP
+
+![Email 1 sender IP](../evidence/screenshots/manual-artifact-collection/05-email1-sender-ip.png)
+
+The raw `.eml` file was reviewed to identify the IP address associated with the message's sending infrastructure.
+
+**Observed sender IP:** `54.240.5.4`
+
+The sender IP was recorded as an infrastructure artifact for further investigation. An IP address can be used for additional enrichment, including WHOIS/RDAP ownership checks, reverse DNS lookups, reputation analysis, and correlation with other security telemetry. The IP should not be considered malicious based on the email header alone.
