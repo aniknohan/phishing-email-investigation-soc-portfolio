@@ -259,3 +259,16 @@ The sender IP address identified during the previous step was investigated using
 The lookup shows that the IP resolves to a hostname under `outbound.protection.outlook.com`. The result was recorded as an infrastructure artifact and can be correlated with the email's `Received` headers, sender information, and other collected indicators.
 
 The lookup also associates the IP address with Microsoft Corporation and ASN `AS8075`. This information provides additional context about the infrastructure but does not, by itself, determine whether the email is malicious.
+
+
+#### Attachment Filename
+
+![Email 2 attachment filename](../evidence/screenshots/manual-artifact-collection/15-email2-attachment-filename.png)
+
+The raw `.eml` file was reviewed in Sublime Text and the `filename` field was located within the MIME attachment section to identify the full name and extension of the attached file.
+
+**Observed filename:** `Apple Music Invoice 13313a.docx`
+
+The MIME headers identify the attachment as a Microsoft Word document with the `.docx` extension. The filename was recorded as an attachment artifact for further investigation.
+
+Because attachments in suspicious emails may contain malicious content, the file should not be opened or executed during initial analysis. Instead, it should be handled in a controlled environment and analyzed using its metadata, cryptographic hashes, and appropriate malware-analysis tools.
