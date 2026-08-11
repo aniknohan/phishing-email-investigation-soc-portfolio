@@ -1,6 +1,9 @@
+
 # Phishing Email Investigation — SOC Analyst Portfolio
 
-A hands-on defensive cybersecurity project that demonstrates how a SOC analyst can triage a suspicious email, extract artifacts, investigate URLs/domains and attachments, correlate evidence, map observed behavior to MITRE ATT&CK, recommend defensive actions, and produce a concise incident report.
+A hands-on SOC phishing investigation portfolio demonstrating email triage, raw `.eml` and header analysis, manual artifact collection, sender-infrastructure investigation, URL and domain analysis, attachment hashing, HTML credential-harvester analysis, IOC extraction, MITRE ATT&CK mapping, and incident-response planning.
+
+The repository documents multiple phishing-analysis scenarios and shows how evidence can be collected, correlated, and converted into defensible analyst findings. The project progresses from initial email review through deeper artifact analysis, malicious-behavior confirmation, incident scoping, containment recommendations, remediation, and post-incident monitoring.
 
 > **Portfolio safety:** The example indicators in this repository are sanitized and non-live. Do not publish real company emails, credentials, internal IP addresses, customer information, authentication tokens, or active malicious files/URLs.
 
