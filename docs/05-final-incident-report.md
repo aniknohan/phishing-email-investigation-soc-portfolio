@@ -1,5 +1,9 @@
 # 05 — Final Incident Report
 
+## Report Scope
+
+This report documents the sanitized credential-phishing example used throughout the core investigation workflow. It is separate from the hands-on email samples and HTML credential-harvester investigation documented elsewhere in this repository.
+
 ## Incident Title
 
 Credential-Phishing Email Investigation
