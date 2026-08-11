@@ -226,6 +226,16 @@ This project demonstrates practical SOC analyst skills across phishing triage, a
 - **Incident Response Planning** — Documented scoping, containment, eradication, recovery, monitoring, and remediation recommendations.
 - **Technical Documentation** — Produced investigation notes, screenshots, IOC records, findings, and incident-response documentation suitable for a SOC workflow.
 
+## Project Takeaways
+
+This project demonstrates an end-to-end phishing investigation workflow from initial email triage through malicious-artifact analysis and incident-response planning.
+
+The investigation goes beyond identifying suspicious email characteristics by collecting and correlating technical evidence from raw email headers, sender infrastructure, URLs, attachments, cryptographic hashes, HTML source code, and browser network activity. Controlled analysis of the HTML attachment provided direct evidence of credential-harvesting behavior and supported a high-confidence malicious verdict.
+
+The project also demonstrates the distinction between **observed evidence** and **recommended production response actions**. Findings documented in this repository are based on artifacts analyzed within the lab environment, while containment, remediation, recovery, and monitoring activities are presented as actions that a SOC team could perform using appropriate enterprise security controls.
+
+Overall, the project demonstrates practical experience with **phishing investigation, IOC extraction, evidence correlation, malicious HTML analysis, network-request analysis, MITRE ATT&CK mapping, incident-response methodology, and technical security documentation**.
+
 ## Disclaimer
 
 This repository is for defensive cybersecurity education and portfolio demonstration only. Do not execute suspicious attachments or directly browse suspicious links from a production workstation. Follow your organization’s policies and use isolated, authorized analysis environments.
