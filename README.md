@@ -120,11 +120,6 @@ For the response workflow that follows the technical investigation, see:
 
 **[Incident Response and Remediation →](docs/09-incident-response-and-remediation.md)**
 
-## Tools Demonstrated
-
-This workflow can be performed with a safe text editor such as **Visual Studio Code**, **Notepad++**, or **Sublime Text** for raw `.eml` review; **PowerShell `Get-FileHash`** for MD5/SHA1/SHA256 calculation; and approved passive or sandbox services such as **VirusTotal**, **WHOIS/RDAP**, **URL2PNG or another remote web-capture service**, **WannaBrowser**, **Hybrid Analysis**, **URLhaus**, and **PhishTool**.
-
-The goal is not to use every tool in every case. A SOC analyst should select the minimum set of sources needed to answer the investigation questions and should avoid unnecessary direct interaction with suspicious infrastructure.
 
 ## Example Case Verdict
 
