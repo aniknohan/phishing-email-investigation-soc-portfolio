@@ -242,3 +242,16 @@ The message uses urgency by claiming that the recipient's Amazon account and pen
 These indicators suggest that the attacker is impersonating Amazon and attempting to convince the recipient to provide private or account information.
 
 **Verdict: Malicious — likely credential-harvesting phishing email.**
+
+
+## Email 3 Analysis
+
+![Email 3](../evidence/screenshots/email-demo-03-spam-email.png)
+
+The email appears to be promotional content related to a Bitcoin investment or trading opportunity.
+
+During the initial review, the message does not show clear suspicious or malicious indicators that would classify it as a phishing email.
+
+Based on the content and purpose of the message, it is more consistent with unsolicited promotional spam or junk mail rather than a malicious phishing attempt.
+
+**Verdict: Non-malicious — spam / junk email.**
