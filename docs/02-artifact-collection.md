@@ -272,3 +272,16 @@ The raw `.eml` file was reviewed in Sublime Text and the `filename` field was lo
 The MIME headers identify the attachment as a Microsoft Word document with the `.docx` extension. The filename was recorded as an attachment artifact for further investigation.
 
 Because attachments in suspicious emails may contain malicious content, the file should not be opened or executed during initial analysis. Instead, it should be handled in a controlled environment and analyzed using its metadata, cryptographic hashes, and appropriate malware-analysis tools.
+
+
+#### Attachment Verification in Thunderbird
+
+![Email 2 attachment in Thunderbird](../evidence/screenshots/manual-artifact-collection/16-email2-attachment-thunderbird.png)
+
+The attachment filename was also verified directly through the Mozilla Thunderbird email client. Thunderbird displays attachment information at the bottom of the opened message, providing an additional method of confirming the file associated with the email.
+
+**Verified attachment:** `Apple Music Invoice 13313a.docx`
+
+The filename displayed in Thunderbird matches the filename identified earlier in the raw `.eml` content. Confirming the artifact through both the MIME data and the email client helps validate that the correct attachment was identified before proceeding with file-hash collection and further analysis.
+
+The attachment was not opened or executed during this verification step.
