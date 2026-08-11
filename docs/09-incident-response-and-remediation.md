@@ -432,3 +432,78 @@ This investigation demonstrates that determining whether an email is malicious r
 Email headers, sender infrastructure, URLs, attachment metadata, file hashes, source code, and observed network behavior can collectively provide the evidence needed to reach a defensible analyst conclusion.
 
 The investigation also reinforces the importance of separating **observed evidence** from **recommended response actions**. Actions that were not performed within the lab environment should be documented as recommendations rather than presented as completed production remediation.
+
+
+---
+
+## 7. Final Incident Response Summary
+
+The phishing investigation identified malicious email activity involving deceptive sender information, suspicious links, malicious attachments, and credential-harvesting behavior.
+
+The investigation followed an evidence-driven process beginning with email triage and artifact collection. Email headers, sender information, sending infrastructure, URLs, attachment metadata, cryptographic hashes, HTML source code, and network behavior were examined to determine whether the observed messages and associated artifacts were malicious.
+
+The HTML credential-harvesting investigation demonstrated that a malicious attachment could present a fraudulent Microsoft / Office 365 login page and transmit information entered into the form to external infrastructure.
+
+Based on the collected evidence, the activity was classified as a confirmed phishing threat involving credential theft attempts and malicious attachments.
+
+### Recommended Response Workflow
+
+The appropriate incident-response process for the identified activity includes:
+
+1. **Identify** — Review the suspicious email and collect relevant artifacts.
+2. **Analyze** — Examine headers, URLs, domains, attachments, hashes, source code, and network behavior.
+3. **Scope** — Search available telemetry for additional affected users, systems, messages, and related indicators.
+4. **Contain** — Remove confirmed phishing messages, block malicious infrastructure, and secure potentially affected accounts.
+5. **Eradicate** — Remove malicious artifacts and unauthorized account changes.
+6. **Recover** — Restore affected accounts or systems to normal operation after validating that the threat has been addressed.
+7. **Monitor** — Continue monitoring for suspicious authentication, network, email, or endpoint activity.
+8. **Improve** — Use lessons learned and collected indicators to strengthen future detection and response.
+
+### Final Assessment
+
+**Incident Type:** Phishing
+
+**Threat Activity:** Credential Harvesting / Malicious Attachment
+
+**Severity:** High
+
+**Disposition:** Confirmed Malicious
+
+**Production Compromise:** Not established by the available lab evidence
+
+The lab demonstrates investigation and analysis of malicious phishing artifacts. Containment, eradication, account remediation, and recovery actions documented in this report represent recommended SOC procedures because the lab did not provide access to production security systems.
+
+---
+
+## 8. Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- Phishing email triage and classification
+- Raw `.eml` and email-header analysis
+- Sender and recipient identification
+- Email routing and sending-IP analysis
+- Reverse DNS and infrastructure investigation
+- URL and domain artifact collection
+- Suspicious attachment identification
+- File metadata analysis
+- SHA256 hash collection
+- HTML credential-harvester analysis
+- Static source-code analysis
+- CyberChef URL decoding
+- Browser Developer Tools network analysis
+- Credential-submission behavior analysis
+- Indicator of Compromise (IOC) extraction
+- Incident scoping methodology
+- Threat-hunting methodology
+- Phishing containment planning
+- Account-compromise response planning
+- Eradication and remediation procedures
+- Recovery and post-incident monitoring
+- Evidence-based incident documentation
+
+## Conclusion
+
+This project demonstrates an end-to-end approach to phishing investigation and incident response, beginning with suspicious email analysis and progressing through artifact collection, malicious-content analysis, IOC identification, incident scoping, containment planning, remediation, recovery, and lessons learned.
+
+A key principle throughout the investigation was to distinguish between directly observed evidence and recommended production response actions. This ensures that conclusions remain supported by the available evidence while demonstrating how the findings could be operationalized within a SOC environment.
