@@ -94,6 +94,32 @@ phishing-email-investigation-soc-portfolio/
         └── html-credential-harvester/
 ```
 
+## Project Documentation
+
+The investigation is documented across the following sections:
+
+1. [Investigation Methodology](docs/01-investigation-methodology.md) — Investigation approach, evidence handling, and analysis methodology.
+2. [Artifact Collection](docs/02-artifact-collection.md) — Manual extraction of email headers, sender infrastructure, URLs, domains, attachments, and file hashes.
+3. [Analysis and Findings](docs/03-analysis-and-findings.md) — Correlation of collected artifacts and documentation of analyst findings.
+4. [Defensive Actions](docs/04-defensive-actions.md) — Recommended defensive actions based on the investigation findings.
+5. [Final Incident Report](docs/05-final-incident-report.md) — Consolidated incident findings and final assessment.
+6. [Email Analysis Demo](docs/06-email-analysis-demo.md) — Practical walkthrough of phishing email analysis.
+7. [MITRE ATT&CK Mapping](docs/07-mitre-attack-mapping.md) — Mapping of observed phishing behavior to relevant MITRE ATT&CK techniques.
+8. [HTML Credential Harvester Analysis](docs/08-html-credential-harvester-analysis.md) — Static and behavioral analysis of an HTML attachment designed to harvest credentials.
+9. [Incident Response and Remediation](docs/09-incident-response-and-remediation.md) — Incident classification, scoping, containment, remediation, recovery, monitoring, and lessons learned.
+
+### Featured Investigation
+
+For the most technical hands-on analysis, see:
+
+**[HTML Credential Harvester Analysis →](docs/08-html-credential-harvester-analysis.md)**
+
+This investigation demonstrates HTML attachment identification, SHA256 hashing, metadata review, source-code analysis, URL decoding, browser Developer Tools analysis, credential-submission observation, and IOC extraction.
+
+For the response workflow that follows the technical investigation, see:
+
+**[Incident Response and Remediation →](docs/09-incident-response-and-remediation.md)**
+
 ## Tools Demonstrated
 
 This workflow can be performed with a safe text editor such as **Visual Studio Code**, **Notepad++**, or **Sublime Text** for raw `.eml` review; **PowerShell `Get-FileHash`** for MD5/SHA1/SHA256 calculation; and approved passive or sandbox services such as **VirusTotal**, **WHOIS/RDAP**, **URL2PNG or another remote web-capture service**, **WannaBrowser**, **Hybrid Analysis**, **URLhaus**, and **PhishTool**.
