@@ -84,3 +84,15 @@ The page was designed to resemble a Microsoft authentication portal and presente
 
 This behavior is significant because the HTML attachment is not simply displaying static content. It presents a login interface intended to persuade the recipient to enter account credentials. Further analysis was therefore performed to determine how the page was configured and where submitted information was transmitted.
 
+### 5. Targeted Recipient Identification
+
+![Targeted email address](../evidence/screenshots/html-credential-harvester/05-targeted-email-address.png)
+
+The rendered phishing page was examined to determine whether it contained information specific to the intended victim. The login field was already populated with an email address when the HTML attachment was opened.
+
+**Observed targeted email:** `contact@securityblue.team`
+
+The pre-populated email address indicates that the credential-harvesting page was configured to display the target's email address automatically. This can make a phishing page appear more convincing because the victim sees their address already associated with the fake login form.
+
+This artifact also provides useful investigative context by identifying the account targeted by the phishing attempt. In a SOC investigation, the identified account could be used to scope additional searches for related phishing messages and suspicious authentication activity.
+
