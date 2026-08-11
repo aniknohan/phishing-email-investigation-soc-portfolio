@@ -207,22 +207,24 @@ Potentially malicious URLs are defanged in the written documentation where appro
 
 The evidence in this repository is intended to support the documented analyst findings and demonstrate the investigative process performed within the lab environment.
 
-## Project Documents
-
-- [Investigation Methodology](docs/01-investigation-methodology.md)
-- [Artifact Collection](docs/02-artifact-collection.md)
-- [Analysis and Findings](docs/03-analysis-and-findings.md)
-- [Defensive Actions](docs/04-defensive-actions.md)
-- [Final Incident Report](docs/05-final-incident-report.md)
-- [Hands-On Email Analysis Demo](docs/06-email-analysis-demo.md)
-- [MITRE ATT&CK Mapping](docs/07-mitre-attack-mapping.md)
-- [Screenshot Guide](docs/screenshot-guide.md)
-- [Artifact Worksheet](data/artifact-worksheet.md)
-- [IOC Register](data/iocs.csv)
-
 ## Skills Demonstrated
 
-Phishing triage, raw email/header analysis, IOC extraction, URL/domain investigation, file hashing, threat-intelligence correlation, safe evidence handling, MITRE ATT&CK mapping, incident scoping, defensive recommendations, and SOC-style reporting.
+This project demonstrates practical SOC analyst skills across phishing triage, artifact analysis, malicious-content investigation, and incident-response planning.
+
+- **Phishing Email Triage** — Reviewed suspicious emails and identified artifacts requiring further investigation.
+- **Email Header Analysis** — Examined raw `.eml` content to identify sender and recipient information, timestamps, subject lines, and sending infrastructure.
+- **IOC Extraction** — Collected and documented IP addresses, domains, URLs, filenames, hashes, email addresses, and network endpoints.
+- **Sender Infrastructure Analysis** — Investigated sending IP addresses and reverse DNS / hostname information.
+- **URL and Domain Analysis** — Extracted suspicious URLs, identified root domains, and safely documented malicious indicators.
+- **Attachment Analysis** — Examined attachment filenames, extensions, metadata, file sizes, and cryptographic hashes.
+- **PowerShell File Hashing** — Used `Get-FileHash` to calculate cryptographic hashes for suspicious attachments.
+- **HTML Source-Code Analysis** — Reviewed suspicious HTML content for fake login interfaces, embedded resources, forms, and credential-collection behavior.
+- **Network Request Analysis** — Used browser Developer Tools to inspect network activity generated during controlled credential-harvester testing.
+- **Credential-Harvester Analysis** — Identified how submitted test credentials were transmitted to external infrastructure.
+- **Evidence Correlation** — Combined multiple technical artifacts to support a high-confidence malicious verdict.
+- **MITRE ATT&CK Mapping** — Mapped observed phishing behavior to relevant adversary techniques.
+- **Incident Response Planning** — Documented scoping, containment, eradication, recovery, monitoring, and remediation recommendations.
+- **Technical Documentation** — Produced investigation notes, screenshots, IOC records, findings, and incident-response documentation suitable for a SOC workflow.
 
 ## Disclaimer
 
