@@ -72,3 +72,21 @@ Record the filename, file size, and hashes.
 ## Evidence to Save
 
 Save screenshots according to `screenshot-guide.md`. Do not save or publish the real malicious attachment in a public repository.
+
+---
+
+## Hands-On Manual Artifact Collection
+
+The following section documents the manual collection of artifacts from email samples. Raw `.eml` content was reviewed to identify message metadata, sending infrastructure, URLs, domains, attachments, and file hashes.
+
+### Email 1 — Header and Message Artifacts
+
+#### Sender Address
+
+![Email 1 sender address](../evidence/screenshots/manual-artifact-collection/01-email1-sender-address.png)
+
+The raw `.eml` file was opened in a text editor and the `From` field was located to identify the sender.
+
+**Observed sender:** `security@netflixxuk.com`
+
+The sender address was recorded as an email artifact for further investigation. The domain resembles the Netflix brand but should not be considered legitimate based on appearance alone. Additional infrastructure and URL analysis is required before reaching a final determination.
