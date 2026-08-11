@@ -90,3 +90,13 @@ The raw `.eml` file was opened in a text editor and the `From` field was located
 **Observed sender:** `security@netflixxuk.com`
 
 The sender address was recorded as an email artifact for further investigation. The domain resembles the Netflix brand but should not be considered legitimate based on appearance alone. Additional infrastructure and URL analysis is required before reaching a final determination.
+
+#### Recipient Address
+
+![Email 1 recipient address](../evidence/screenshots/manual-artifact-collection/02-email1-recipient-address.png)
+
+The raw `.eml` file was reviewed and the `To` field was located to identify the intended recipient.
+
+**Observed recipient:** `jake.wood@dicksonunited.co.uk`
+
+The recipient address was recorded as part of the message metadata. Identifying the intended recipient helps establish who was targeted by the message and provides context for determining the scope of the phishing investigation.
