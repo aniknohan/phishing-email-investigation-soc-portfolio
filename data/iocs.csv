@@ -3,3 +3,9 @@ sender_email,security-alert@example-mail[.]test,malicious,high,block sender if a
 originating_ip,192.0.2.44,suspicious,medium,review telemetry before blocking
 url,hxxps://account-review[.]example/login,malicious,high,block URL
 domain,account-review[.]example,malicious,high,block domain
+
+
+filename,MICROINV-US1070822.html,malicious,high,search and quarantine matching attachment
+sha256,0FC57290189ADECFE17F6BACBC515ED080CD63C54B282FDEF4EF3DFC598CDD1E,malicious,high,search endpoints and correlate file hash
+domain,alia[.]typentfs[.]xyz,malicious,high,block domain and search network telemetry
+url,hxxp://alia[.]typentfs[.]xyz/off.php,malicious,high,block URL and search proxy/network telemetry
