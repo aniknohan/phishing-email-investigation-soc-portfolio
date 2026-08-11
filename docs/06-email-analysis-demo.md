@@ -229,3 +229,16 @@ The email also uses a different Reply-To address: **david.kms@aol.com**.
 The email does not contain a link or attachment. It appears to be trying to get the recipient to reply and start a conversation.
 
 **Verdict: Suspicious — possible reconnaissance email.**
+
+
+## Email 2 Analysis
+
+![Email 2](../evidence/screenshots/email-demo-02-credential-phishing.png)
+
+The email claims to be an Amazon account security message, but the sender address is **non-reply@email.lanhdaotaiba.com**, which does not belong to Amazon.
+
+The message uses urgency by claiming that the recipient's Amazon account and pending orders have been blocked. It then asks the recipient to verify account information using the "Check now" button.
+
+These indicators suggest that the attacker is impersonating Amazon and attempting to convince the recipient to provide private or account information.
+
+**Verdict: Malicious — likely credential-harvesting phishing email.**
