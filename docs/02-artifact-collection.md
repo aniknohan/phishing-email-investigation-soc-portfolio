@@ -132,3 +132,16 @@ The raw `.eml` file was reviewed to identify the IP address associated with the 
 **Observed sender IP:** `54.240.5.4`
 
 The sender IP was recorded as an infrastructure artifact for further investigation. An IP address can be used for additional enrichment, including WHOIS/RDAP ownership checks, reverse DNS lookups, reputation analysis, and correlation with other security telemetry. The IP should not be considered malicious based on the email header alone.
+
+
+#### Reverse DNS Lookup
+
+![Email 1 reverse DNS](../evidence/screenshots/manual-artifact-collection/06-email1-reverse-dns.png)
+
+A reverse DNS lookup was performed on the identified sender IP address `54.240.5.4` to determine whether a hostname was associated with the sending infrastructure.
+
+**Observed IP:** `54.240.5.4`
+
+**Reverse DNS result:** `a5-4.smtp-out.eu-west-1.amazonses.com`
+
+The reverse DNS result was recorded as an infrastructure artifact. This information can help identify the network or service associated with the sending IP and provide additional context during the investigation. A reverse DNS result alone does not establish whether the message is legitimate or malicious.
