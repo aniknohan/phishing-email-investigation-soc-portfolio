@@ -245,3 +245,17 @@ The raw `.eml` file was reviewed in Sublime Text to identify the IP address asso
 The IP address was collected as an infrastructure artifact for further investigation. Sender IP information can be enriched using WHOIS/RDAP, reverse DNS, reputation services, and threat-intelligence sources to better understand the infrastructure involved in delivering the message.
 
 The IP address should not be considered malicious based solely on its presence in the email headers. It must be correlated with the complete mail-routing information and other collected indicators before reaching a final determination.
+
+#### Reverse DNS / Hostname Lookup
+
+![Email 2 reverse DNS](../evidence/screenshots/manual-artifact-collection/14-email2-reverse-dns.png)
+
+The sender IP address identified during the previous step was investigated using DomainTools to gather additional information about the sending infrastructure.
+
+**Investigated IP:** `40.92.89.55`
+
+**Resolved hostname:** `mail-db8eur05olkn2055.outbound.protection.outlook.com`
+
+The lookup shows that the IP resolves to a hostname under `outbound.protection.outlook.com`. The result was recorded as an infrastructure artifact and can be correlated with the email's `Received` headers, sender information, and other collected indicators.
+
+The lookup also associates the IP address with Microsoft Corporation and ASN `AS8075`. This information provides additional context about the infrastructure but does not, by itself, determine whether the email is malicious.
