@@ -1,5 +1,9 @@
 # 03 — Analysis and Findings
 
+## Scope
+
+This section demonstrates how collected phishing artifacts can be correlated into analyst findings using a sanitized example case. It is separate from the hands-on email and HTML credential-harvester investigations documented elsewhere in this repository.
+
 ## Email Analysis
 
 The message attempts to impersonate a trusted account-security service and pressures the recipient to verify an account. The requested action is consistent with a credential-harvesting lure.
