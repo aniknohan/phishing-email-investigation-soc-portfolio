@@ -53,3 +53,80 @@ The investigation has demonstrated malicious functionality; however, the availab
 **Status:** Confirmed Malicious
 
 The collected email artifacts, attachment analysis, source-code findings, and observed network behavior provide sufficient evidence to classify the activity as malicious phishing.
+
+
+---
+
+## 2. Incident Scoping and Threat Hunting
+
+After confirming the phishing activity as malicious, the next step is to determine the potential scope of the incident. The collected indicators can be used to search available email, network, endpoint, and authentication telemetry for related activity.
+
+### Email Scoping
+
+Search the email environment for messages containing indicators associated with the phishing campaign, including:
+
+- Matching sender addresses.
+- Similar subject lines.
+- Known malicious URLs or domains.
+- Matching attachment filenames.
+- Matching attachment hashes.
+- Messages delivered to additional recipients.
+
+This helps determine whether the phishing message targeted a single user or was distributed to multiple users within the organization.
+
+### IOC-Based Threat Hunting
+
+The indicators collected during the investigation should be used to search available security telemetry.
+
+For the HTML credential-harvesting activity, relevant indicators include:
+
+**Attachment Filename:**
+
+`MICROINV-US1070822.html`
+
+**SHA256:**
+
+`0FC57290189ADECFE17F6BACBC515ED080CD63C54B282FDEF4EF3DFC598CDD1E`
+
+**Credential Collection Domain:**
+
+`alia[.]typentfs[.]xyz`
+
+**Credential Collection Endpoint:**
+
+`/off.php`
+
+Searches should look for systems or users that accessed the identified domain, encountered the attachment, or generated network requests associated with the credential-collection infrastructure.
+
+### User Interaction Scoping
+
+Determine whether any recipients interacted with the phishing content.
+
+Relevant questions include:
+
+- Did the user open the phishing email?
+- Did the user open or save the HTML attachment?
+- Did the user interact with the fraudulent login page?
+- Did the user submit credentials?
+- Did the user's system communicate with the identified external domain?
+
+If credential submission is suspected or confirmed, the affected account should be treated as potentially compromised and escalated for account-protection actions.
+
+### Authentication Review
+
+Review available authentication logs for potentially affected accounts. Look for activity occurring after the suspected phishing interaction, including:
+
+- Successful logins from unfamiliar IP addresses or locations.
+- Multiple failed authentication attempts followed by a successful login.
+- New devices or unusual login activity.
+- Unexpected authentication activity inconsistent with the user's normal behavior.
+
+These findings can help determine whether stolen credentials were subsequently used.
+
+### Scope Determination
+
+The incident scope should be updated as additional evidence is collected.
+
+The available lab evidence confirms the malicious behavior of the phishing content, but it does not establish that real production credentials were compromised or that additional organizational users were affected. Therefore, broader organizational impact should not be assumed without supporting telemetry.
+
+**Current Scope:** Confirmed malicious phishing artifact; broader user or account compromise not established from the available lab evidence.
