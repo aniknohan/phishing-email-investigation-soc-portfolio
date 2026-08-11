@@ -204,3 +204,16 @@ The raw `.eml` file was reviewed in Sublime Text and the `To` field was located 
 The recipient address was recorded as part of the email metadata. Identifying the intended recipient helps establish who was targeted by the message and provides context for determining the scope of the investigation.
 
 In a production SOC environment, this artifact could also be used to search for related messages, determine whether additional users received the same email, and assess the potential impact of the campaign.
+
+
+#### Subject Line
+
+![Email 2 subject](../evidence/screenshots/manual-artifact-collection/11-email2-subject.png)
+
+The raw `.eml` file was reviewed in Sublime Text and the `Subject` field was located to identify the subject line of the message.
+
+**Observed subject:** `Invoice No.: 3271653512`
+
+The subject line presents the message as an invoice and includes a specific invoice number. This information was recorded as an email artifact because subject lines can provide useful context about the sender's pretext and can also be used when searching for related messages during an investigation.
+
+The subject alone does not establish malicious intent and should be correlated with the sender, recipient, sending infrastructure, message content, and attachment analysis.
