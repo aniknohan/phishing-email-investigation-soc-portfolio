@@ -269,3 +269,18 @@ The email also contains a **DOCX attachment** and attempts to convince the recip
 The attachment could potentially contain malicious macros or redirect the recipient to a malicious website. The attachment should not be opened until it has been safely analyzed.
 
 **Verdict: Malicious — suspected phishing email with a potentially malicious attachment.**
+
+## Final Outcome
+
+This email analysis exercise demonstrates the ability to review and classify different types of email messages based on observable indicators.
+
+The four examples included:
+
+- **Email 1:** Suspicious reconnaissance / response-solicitation email
+- **Email 2:** Malicious credential-harvesting phishing email
+- **Email 3:** Non-malicious spam / junk email
+- **Email 4:** Malicious phishing email with a potentially malicious attachment
+
+The analysis focused on identifying suspicious sender information, Reply-To mismatches, impersonation, urgency, social-engineering techniques, suspicious attachments, and the overall intent of each message.
+
+These examples demonstrate practical SOC email-triage skills by distinguishing between suspicious, malicious, and non-malicious messages and documenting the reasoning behind each verdict.
