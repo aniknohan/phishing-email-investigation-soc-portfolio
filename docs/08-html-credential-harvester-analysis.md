@@ -25,3 +25,20 @@ The investigation focused on the following questions:
 - What email address was pre-populated in the phishing page?
 - What Microsoft logo file was referenced in the decoded source?
 - Where were submitted credentials being transmitted?
+
+
+---
+
+## Investigation Findings
+
+### 1. HTML Attachment Identification
+
+![HTML attachment filename](../evidence/screenshots/html-credential-harvester/01-html-attachment-filename.png)
+
+The suspicious attachment was located in the lab environment and its file properties were reviewed to identify the complete filename and file type.
+
+**Observed attachment:** `MICRO.html`
+
+The `.html` extension identifies the attachment as an HTML document capable of rendering web content locally in a browser. In the context of a phishing investigation, HTML attachments require careful examination because they can contain forms, scripts, redirects, or other content designed to imitate legitimate websites and collect user information.
+
+At this stage, the file type alone does not establish malicious intent. The attachment was therefore treated as a suspicious artifact and examined further through hashing, metadata review, source-code analysis, and controlled behavioral observation.
