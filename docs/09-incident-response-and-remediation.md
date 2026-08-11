@@ -354,3 +354,81 @@ Recovery should be considered successful when available evidence indicates that 
 The available lab evidence demonstrates phishing investigation and malicious artifact analysis. It does not provide production authentication, endpoint, email-gateway, or network telemetry required to perform and validate real recovery actions.
 
 Therefore, the recovery and monitoring activities documented in this section represent **recommended SOC procedures** that would follow the investigation in a production environment.
+
+
+---
+
+## 6. Lessons Learned and Security Improvements
+
+After the incident has been investigated, contained, and remediated, the final response phase should identify lessons that can improve future phishing detection and response.
+
+### Email Security Improvements
+
+The investigation demonstrated that phishing messages can use several techniques to deceive recipients, including sender impersonation, suspicious links, malicious attachments, disguised file extensions, and credential-harvesting pages.
+
+Potential improvements include:
+
+- Strengthening filtering for suspicious HTML and executable attachments.
+- Detecting filenames that use misleading or double extensions.
+- Improving URL and domain reputation filtering.
+- Reviewing email authentication results such as SPF, DKIM, and DMARC during investigations.
+- Blocking confirmed malicious indicators through appropriate email-security controls.
+- Reviewing whether similar phishing messages were delivered to additional users.
+
+### Credential Phishing Detection
+
+The HTML attachment analyzed during the investigation impersonated a Microsoft login page and attempted to collect information entered by the user.
+
+Security teams should consider detections for:
+
+- HTML attachments containing login forms.
+- Suspicious HTML attachments impersonating commonly used services.
+- Connections to newly observed or known malicious domains after an email is opened.
+- Credential-related parameters transmitted to suspicious external infrastructure.
+- Users accessing suspicious domains shortly after receiving a phishing email.
+
+### Attachment Security
+
+The investigation also demonstrated the importance of handling suspicious attachments carefully.
+
+Potentially malicious attachments should be analyzed in an isolated environment rather than opened on production systems. File hashes should be collected where possible so that suspicious files can be investigated and correlated without executing them.
+
+Email-security gateways should quarantine or remove attachments that violate organizational security policies.
+
+### User Awareness
+
+Technical controls should be supported by user awareness training.
+
+Users should be encouraged to report messages containing:
+
+- Unexpected login requests.
+- Unusual sender addresses.
+- Suspicious attachments.
+- Urgent requests to take immediate action.
+- Links directing users to unexpected authentication pages.
+- Messages requesting credentials or sensitive information.
+
+Reported phishing messages can provide SOC analysts with valuable evidence and may allow security teams to identify a campaign before additional users interact with it.
+
+### Detection and Response Improvements
+
+Indicators collected during phishing investigations should be retained according to organizational policy and used to improve future detection and response.
+
+Useful indicators may include:
+
+- Sender addresses.
+- Sending infrastructure.
+- Domains and URLs.
+- Attachment filenames.
+- Cryptographic hashes.
+- Credential-collection endpoints.
+
+Where appropriate, confirmed indicators can be incorporated into SIEM searches, email-security detections, network monitoring, and endpoint-security controls.
+
+### Lessons Learned
+
+This investigation demonstrates that determining whether an email is malicious requires correlation of multiple artifacts rather than relying on a single suspicious characteristic.
+
+Email headers, sender infrastructure, URLs, attachment metadata, file hashes, source code, and observed network behavior can collectively provide the evidence needed to reach a defensible analyst conclusion.
+
+The investigation also reinforces the importance of separating **observed evidence** from **recommended response actions**. Actions that were not performed within the lab environment should be documented as recommendations rather than presented as completed production remediation.
