@@ -165,7 +165,43 @@ For the complete response workflow, see **[Incident Response and Remediation →
 
 ## Evidence and Screenshots
 
-The project is fully readable without screenshots. When screenshots are added later, store sanitized PNG images under `evidence/screenshots/` and follow [`docs/screenshot-guide.md`](docs/screenshot-guide.md). The guide provides filenames and suggested evidence for VS Code/raw headers, VirusTotal, WHOIS/RDAP, safe webpage capture, PhishTool, Hybrid Analysis, URLhaus, and file-hash output.
+Investigation evidence is organized by analysis type so that the documented findings can be traced back to supporting screenshots and artifacts.
+
+### Manual Email Artifact Collection
+
+Evidence from the manual `.eml` investigation includes:
+
+- Sender and recipient addresses
+- Subject lines and timestamps
+- Sending-server IP addresses
+- Reverse DNS / hostname information
+- Extracted URLs and root domains
+- Attachment filenames
+- MD5 and SHA256 hashes
+
+**[View Manual Artifact Collection Evidence →](evidence/screenshots/manual-artifact-collection/)**
+
+### HTML Credential Harvester Analysis
+
+Evidence from the HTML attachment investigation includes:
+
+- HTML attachment identification
+- SHA256 hash collection
+- File-size and metadata review
+- HTML source-code analysis
+- Embedded resource inspection
+- URL decoding
+- Browser Developer Tools network analysis
+- Credential-submission request analysis
+- Credential-collection domain and endpoint identification
+
+**[View HTML Credential Harvester Evidence →](evidence/screenshots/html-credential-harvester/)**
+
+### Evidence Handling
+
+Potentially malicious URLs are defanged in the written documentation where appropriate. Screenshots are used to demonstrate the investigation process without publishing active malicious content for execution.
+
+The evidence in this repository is intended to support the documented analyst findings and demonstrate the investigative process performed within the lab environment.
 
 ## Project Documents
 
