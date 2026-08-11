@@ -142,6 +142,21 @@ A reverse DNS lookup was performed on the identified sender IP address `54.240.5
 
 **Observed IP:** `54.240.5.4`
 
-**Reverse DNS result:** `a5-4.smtp-out.eu-west-1.amazonses.com`
+**Reverse DNS result:** `a5-4[.]smtp-out.eu-west-1[.]amazonses[.]com`
 
 The reverse DNS result was recorded as an infrastructure artifact. This information can help identify the network or service associated with the sending IP and provide additional context during the investigation. A reverse DNS result alone does not establish whether the message is legitimate or malicious.
+
+
+#### URL Extraction
+
+![Email 1 URL extraction](../evidence/screenshots/manual-artifact-collection/07-email1-url-extraction.png)
+
+The email was reviewed to identify the destination of the embedded hyperlink. The URL was extracted without directly navigating to the destination, reducing the risk of interacting with potentially malicious content.
+
+**Observed URL (defanged):**
+
+`hxxps://www[.]thiswouldbeamalicioussite[.]com/index/2020/j411/NetflixLogin[.]php`
+
+The URL was recorded as an investigation artifact for further analysis. The path contains `NetflixLogin.php`, which is consistent with a page designed to imitate a Netflix login workflow. This observation should be correlated with the sender information, domain analysis, and other indicators before reaching a final verdict.
+
+For safe documentation, the URL has been defanged by replacing `https` with `hxxps` and periods in the domain with `[.]`.
