@@ -300,3 +300,57 @@ Validation should confirm that:
 The available lab evidence demonstrates investigation and identification of phishing artifacts but does not provide access to production mailboxes, identity systems, endpoints, or security gateways.
 
 Therefore, the eradication and remediation actions described in this section represent **recommended SOC response procedures** rather than actions performed against a production environment.
+
+
+---
+
+## 5. Recovery and Post-Incident Monitoring
+
+After containment and remediation activities are completed, the recovery phase focuses on returning affected users and systems to normal operation while monitoring for signs of continued or recurring malicious activity.
+
+### Account Recovery
+
+If an account was determined to be potentially compromised, access should only be fully restored after appropriate security actions have been completed.
+
+Recovery activities may include:
+
+- Confirming that the user's password has been reset.
+- Confirming that suspicious authenticated sessions have been revoked.
+- Verifying multi-factor authentication settings.
+- Removing unauthorized authentication methods or account changes.
+- Confirming that suspicious mailbox rules or forwarding configurations have been removed.
+- Verifying that the legitimate user can securely access the account.
+
+### Endpoint Recovery
+
+If an endpoint was isolated during the investigation, available endpoint telemetry should be reviewed before returning the system to normal operation.
+
+The analyst should verify that no additional malicious files, processes, persistence mechanisms, or suspicious network activity remain on the affected system.
+
+If the investigation involved only interaction with a credential-harvesting page and no evidence of endpoint compromise was identified, endpoint recovery actions should be based on the available evidence rather than assuming malware execution occurred.
+
+### Post-Incident Monitoring
+
+Affected accounts and systems should be monitored for additional suspicious activity following remediation.
+
+Relevant activity to monitor includes:
+
+- Successful logins from unfamiliar IP addresses or locations.
+- Repeated failed authentication attempts.
+- Unexpected MFA activity.
+- Newly registered authentication methods.
+- Suspicious mailbox or forwarding-rule changes.
+- Additional communication with identified malicious infrastructure.
+- Recurrence of matching phishing emails or attachments.
+
+The identified phishing indicators can also be retained for continued correlation with email, network, endpoint, and authentication telemetry.
+
+### Validate Recovery
+
+Recovery should be considered successful when available evidence indicates that the identified threat has been contained, affected accounts have been secured where necessary, malicious artifacts have been addressed, and no continuing related activity has been identified.
+
+### Lab Scope
+
+The available lab evidence demonstrates phishing investigation and malicious artifact analysis. It does not provide production authentication, endpoint, email-gateway, or network telemetry required to perform and validate real recovery actions.
+
+Therefore, the recovery and monitoring activities documented in this section represent **recommended SOC procedures** that would follow the investigation in a production environment.
