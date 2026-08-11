@@ -232,3 +232,16 @@ The raw `.eml` file was reviewed in Sublime Text and the `Date` field was locate
 The timestamp was recorded as part of the email metadata. Preserving the original time-zone offset (`+0100`) is useful during an investigation because timestamps may need to be normalized and correlated with other email, authentication, network, or endpoint events.
 
 This artifact helps establish the message timeline and can support correlation with other activity associated with the email.
+
+
+#### Sending Server IP Address
+
+![Email 2 sender IP](../evidence/screenshots/manual-artifact-collection/13-email2-sender-ip.png)
+
+The raw `.eml` file was reviewed in Sublime Text to identify the IP address associated with the email's sending infrastructure. The relevant header information was located in the `Authentication-Results` section, where the `sender IP` value was recorded.
+
+**Observed sender IP:** `40.92.89.55`
+
+The IP address was collected as an infrastructure artifact for further investigation. Sender IP information can be enriched using WHOIS/RDAP, reverse DNS, reputation services, and threat-intelligence sources to better understand the infrastructure involved in delivering the message.
+
+The IP address should not be considered malicious based solely on its presence in the email headers. It must be correlated with the complete mail-routing information and other collected indicators before reaching a final determination.
