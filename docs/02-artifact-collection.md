@@ -110,3 +110,14 @@ The raw `.eml` file was reviewed and the `Subject` field was located to identify
 **Observed subject:** `Netflix: Suspicious Account Activity`
 
 The subject attempts to create concern by warning the recipient about suspicious activity involving a Netflix account. Security-related subject lines can be used to create urgency and encourage the recipient to interact with the message. This indicator should be evaluated together with the sender, URLs, sending infrastructure, and other email artifacts before reaching a final determination.
+
+
+#### Date and Time
+
+![Email 1 date and time](../evidence/screenshots/manual-artifact-collection/04-email1-date-time.png)
+
+The raw `.eml` file was reviewed and the `Date` field was located to identify when the message was sent.
+
+**Observed date/time:** `Sun, 3 May 2020 19:20:58 +0100`
+
+The timestamp was recorded as part of the email metadata. Recording the message date and time helps establish the investigation timeline and can be correlated with other email, authentication, network, or endpoint activity.
