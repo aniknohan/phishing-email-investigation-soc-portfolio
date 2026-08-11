@@ -70,3 +70,17 @@ The file properties of `MICRO.html` were reviewed to collect additional metadata
 Recording the file size provides another identifying characteristic of the attachment and can assist with artifact comparison during an investigation.
 
 File size alone does not indicate whether a file is malicious. It should be considered together with the filename, SHA256 hash, file contents, and observed behavior.
+
+
+### 4. Microsoft Login Page Impersonation
+
+![Microsoft login impersonation](../evidence/screenshots/html-credential-harvester/04-microsoft-login-impersonation.png)
+
+The `MICRO.html` attachment was opened within the controlled lab environment to examine the web page presented to the potential victim.
+
+**Impersonated service:** `Microsoft Outlook / Office 365`
+
+The page was designed to resemble a Microsoft authentication portal and presented the user with a password-entry form. Although the Microsoft logo did not load because the lab environment had no internet connection, the page title and remaining interface elements were consistent with an attempt to imitate a legitimate Microsoft login experience.
+
+This behavior is significant because the HTML attachment is not simply displaying static content. It presents a login interface intended to persuade the recipient to enter account credentials. Further analysis was therefore performed to determine how the page was configured and where submitted information was transmitted.
+
