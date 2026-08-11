@@ -285,3 +285,21 @@ The attachment filename was also verified directly through the Mozilla Thunderbi
 The filename displayed in Thunderbird matches the filename identified earlier in the raw `.eml` content. Confirming the artifact through both the MIME data and the email client helps validate that the correct attachment was identified before proceeding with file-hash collection and further analysis.
 
 The attachment was not opened or executed during this verification step.
+
+#### Attachment File Hashes
+
+![Email 2 file hashes](../evidence/screenshots/manual-artifact-collection/17-email2-file-hashes.png)
+
+The attachment was saved to the analysis system and hashed using the PowerShell `Get-FileHash` cmdlet. Cryptographic hashes were collected without opening or executing the document.
+
+**Attachment:** `Apple Music Invoice 13313a.docx`
+
+**MD5:** `3A3A0C34660656BC74CDC6C87D734771`
+
+**SHA256:** `F05EA223EE0041F9346971C1F98989FF8819C5CE4A78709CA71882A5FCE128`
+
+PowerShell was used to calculate both hashes. Because SHA256 is the default algorithm used by `Get-FileHash`, it can be calculated without explicitly specifying an algorithm. MD5 was calculated by specifying `-Algorithm MD5`.
+
+The hashes provide stable identifiers for the attachment and can be used for file verification, threat-intelligence searches, reputation checks, and correlation with other security telemetry.
+
+Hash values alone do not establish whether a file is malicious. They should be correlated with reputation services, static or sandbox analysis, and other evidence collected during the investigation.
