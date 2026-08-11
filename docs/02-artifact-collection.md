@@ -176,3 +176,18 @@ After extracting the URL from the email, the URL structure was reviewed to ident
 The root domain was separated from the remaining URL path so it could be used as an individual investigation artifact. Identifying the root domain allows the analyst to perform additional enrichment such as WHOIS/RDAP, DNS, reputation, and threat-intelligence checks without relying only on the complete URL.
 
 The domain has been defanged in this documentation to prevent accidental navigation.
+
+
+### Email 2 — Header, Message, and Attachment Artifacts
+
+#### Sender Address
+
+![Email 2 sender address](../evidence/screenshots/manual-artifact-collection/09-email2-sender-address.png)
+
+The raw `.eml` file was opened in Sublime Text and the `From` field was located using the Find feature (`Ctrl + F`) to identify the sender's email address.
+
+**Observed sender:** `elli0taaa@outlook.com`
+
+The sender address was recorded as part of the email metadata for further investigation. Identifying the sender provides an artifact that can be correlated with the sending IP address, email headers, message content, and attachment information.
+
+At this stage, the sender address alone does not establish whether the message is malicious. Additional analysis of the email infrastructure and attachment is required.
