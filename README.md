@@ -123,10 +123,24 @@ For the response workflow that follows the technical investigation, see:
 
 ## Example Case Verdict
 
-**Classification:** Malicious — Credential Phishing  
+**Classification:** Malicious — Credential Phishing / Credential Harvester
+
+**Severity:** High
+
 **Confidence:** High
 
-The example verdict is based on the combination of brand impersonation, urgency, sender/domain mismatch, a non-brand destination, phishing reputation evidence, and a login-oriented landing page. Each individual signal is useful, but the final assessment is based on correlation rather than a single detection.
+**Disposition:** Confirmed Malicious
+
+The final assessment is based on correlation of multiple artifacts rather than a single indicator. The investigation identified phishing characteristics across email metadata, sender infrastructure, URLs, attachments, and web content.
+
+The strongest technical evidence came from analysis of the HTML attachment. The attachment presented a fraudulent Microsoft / Office 365 login interface, and controlled behavioral analysis showed that information entered into the form was transmitted through an HTTP request to external infrastructure.
+
+Additional analysis identified and documented relevant indicators, including the attachment filename, SHA256 hash, credential-collection domain, endpoint, and defanged request URL.
+
+Together, the static and behavioral evidence supports a **high-confidence malicious verdict** and demonstrates credential-harvesting functionality.
+
+**Production compromise:** Not established by the available lab evidence. The analysis confirms malicious functionality but does not establish that real production credentials were submitted or successfully used by an attacker.
+
 
 ## Defensive Response Summary
 
