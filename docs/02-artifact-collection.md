@@ -83,7 +83,7 @@ The following section documents the manual collection of artifacts from email sa
 
 #### Sender Address
 
-![Email 1 sender address](../evidence/screenshots/manual-artifact-collection/01-email1-sender-address.png)
+![Email 1 sender address](../evidence/screenshots/manual-artifact-collection/01-email1-sender-addres.png)
 
 The raw `.eml` file was opened in a text editor and the `From` field was located to identify the sender.
 
