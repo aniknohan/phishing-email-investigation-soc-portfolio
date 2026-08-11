@@ -173,26 +173,11 @@ For the complete response workflow, see **[Incident Response and Remediation →
 
 ## Evidence and Screenshots
 
-Supporting evidence is organized under the `evidence/` directory and is separated by investigation activity.
+Supporting evidence is organized under the `evidence/` directory and separated by investigation activity. Screenshots are used to support the documented findings and demonstrate the analysis performed within the controlled lab environment.
 
 ### Manual Artifact Collection
 
-The `evidence/screenshots/manual-artifact-collection/` directory contains screenshots demonstrating manual extraction and validation of email artifacts, including sender and recipient addresses, subject lines, timestamps, sending IP addresses, reverse DNS information, URLs, attachment information, and file hashes.
-
-### HTML Credential Harvester Analysis
-
-The `evidence/screenshots/html-credential-harvester/` directory contains evidence from the analysis of a malicious HTML attachment, including attachment metadata, SHA256 identification, Microsoft login impersonation, targeted email information, URL decoding, and observed credential-submission network behavior.
-
-### Phishing Investigation and Incident Response
-
-The `evidence/screenshots/incident-response-remediation/` directory contains evidence from the phishing email investigation and subsequent incident-response analysis. This includes raw email header findings, sending infrastructure, suspicious URL extraction, malicious attachment analysis, incident classification, IOC-based scoping, containment recommendations, remediation planning, recovery, post-incident monitoring, and lessons learned.
-
-All screenshots are derived from controlled lab exercises. Sensitive production data, live credentials, and employer or customer information are not included.
-
-
-### Manual Email Artifact Collection
-
-Evidence from the manual `.eml` investigation includes:
+The `evidence/screenshots/manual-artifact-collection/` directory contains evidence from manual `.eml` analysis, including:
 
 - Sender and recipient addresses
 - Subject lines and timestamps
@@ -202,33 +187,47 @@ Evidence from the manual `.eml` investigation includes:
 - Attachment filenames
 - MD5 and SHA256 hashes
 
-**[View Manual Artifact Collection Evidence →](evidence/screenshots/manual-artifact-collection/)**
+[**View Manual Artifact Collection Evidence →**](https://github.com/aniknohan/phishing-email-investigation-soc-portfolio/tree/main/evidence/screenshots/manual-artifact-collection)
 
 ### HTML Credential Harvester Analysis
 
-Evidence from the HTML attachment investigation includes:
+The `evidence/screenshots/html-credential-harvester/` directory contains evidence from the malicious HTML attachment investigation, including:
 
 - HTML attachment identification
 - SHA256 hash collection
 - File-size and metadata review
+- Microsoft / Office 365 login impersonation
 - HTML source-code analysis
-- Embedded resource inspection
 - URL decoding
 - Browser Developer Tools network analysis
 - Credential-submission request analysis
-- Credential-collection domain and endpoint identification
+- Credential-collection infrastructure identification
 
-**[View HTML Credential Harvester Evidence →](evidence/screenshots/html-credential-harvester/)**
+[**View HTML Credential Harvester Evidence →**](https://github.com/aniknohan/phishing-email-investigation-soc-portfolio/tree/main/evidence/screenshots/html-credential-harvester)
 
-### Evidence Status
+### Phishing Investigation and Incident Response
 
-Supporting screenshots and investigation artifacts have been added to the repository and organized by investigation type. The evidence is referenced throughout the technical documentation to support the findings and demonstrate the analysis process.
+The `evidence/screenshots/incident-response-remediation/` directory contains supporting evidence from the phishing investigation and subsequent incident-response analysis, including:
+
+- Raw email header findings
+- Sender and sending-infrastructure analysis
+- Reverse DNS investigation
+- Suspicious URL extraction
+- Malicious attachment analysis
+- Incident classification
+- IOC-based scoping
+- Containment recommendations
+- Eradication and remediation planning
+- Recovery and post-incident monitoring
+- Lessons learned and security improvements
+
+[**View Phishing Investigation and Incident Response Evidence →**](https://github.com/aniknohan/phishing-email-investigation-soc-portfolio/tree/main/evidence/screenshots/incident-response-remediation)
 
 ### Evidence Handling
 
-Potentially malicious URLs are defanged in the written documentation where appropriate. Screenshots are used to demonstrate the investigation process without publishing active malicious content for execution.
+Potentially malicious URLs are defanged in the written documentation where appropriate. Screenshots demonstrate the investigation process without intentionally publishing active malicious content for execution.
 
-The evidence in this repository is intended to support the documented analyst findings and demonstrate the investigative process performed within the lab environment.
+All screenshots and investigation artifacts are derived from controlled lab exercises. Sensitive production data, live credentials, employer or customer information, authentication tokens, and active malicious files are not included.
 
 ## Skills Demonstrated
 
