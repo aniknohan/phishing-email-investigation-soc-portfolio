@@ -1,8 +1,8 @@
 # 02 — Artifact Collection
 
-## Example Case
+## Sanitized Workflow Example
 
-This public example uses sanitized indicators.
+The following sanitized example illustrates the artifact-collection format used in this project. It is separate from the hands-on email samples documented later in this file.
 
 | Artifact | Example |
 |---|---|
