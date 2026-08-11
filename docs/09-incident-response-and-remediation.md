@@ -210,3 +210,93 @@ If malicious execution or additional compromise is identified, isolation of the 
 The lab evidence identifies malicious phishing artifacts and credential-harvesting behavior. The actions described above represent appropriate SOC containment recommendations.
 
 Because the lab does not provide access to a production email gateway, firewall, identity platform, or endpoint detection system, these containment actions are documented as **recommended response actions** rather than actions performed against a real production environment.
+
+
+---
+
+## 4. Eradication and Remediation
+
+After containment, the next objective is to remove the identified phishing artifacts and address any conditions that could allow the threat to continue affecting users.
+
+### Remove Malicious Email Content
+
+Confirmed phishing messages should be removed from affected mailboxes where organizational email-security tooling permits.
+
+Searches should use the indicators collected during the investigation, including sender information, subject lines, malicious URLs, attachment filenames, and file hashes.
+
+Any matching messages discovered during incident scoping should be reviewed and removed when confirmed to be part of the same phishing activity.
+
+### Remove Malicious Attachments
+
+Known malicious attachments should be quarantined or removed from affected systems and mailboxes.
+
+For the HTML credential-harvesting activity, the identified attachment is:
+
+**Filename:**
+
+`MICROINV-US1070822.html`
+
+**SHA256:**
+
+`0FC57290189ADECFE17F6BACBC515ED080CD63C54B282FDEF4EF3DFC598CDD1E`
+
+Security tooling should be used where available to search for additional copies of the file using its hash and other identifying characteristics.
+
+### Remediate Potentially Compromised Accounts
+
+If investigation confirms or strongly indicates that a user submitted credentials to the phishing page, account remediation should be performed.
+
+Recommended actions include:
+
+- Force a password reset for the affected account.
+- Revoke existing authenticated sessions.
+- Review multi-factor authentication settings.
+- Investigate unexpected MFA changes or newly registered authentication methods.
+- Review recent authentication activity for unauthorized access.
+- Review account changes made after the suspected credential submission.
+- Verify that legitimate access has been restored securely.
+
+Password resets alone may not be sufficient if an attacker has already established an authenticated session or modified account security settings.
+
+### Review Email Account Changes
+
+For accounts suspected of compromise, review the mailbox for unauthorized configuration changes that could provide continued access or conceal malicious activity.
+
+Examples include:
+
+- Suspicious inbox or forwarding rules.
+- Unexpected external forwarding addresses.
+- Unauthorized mailbox delegates.
+- Changes to recovery information.
+- Unrecognized account settings.
+
+Any unauthorized changes should be removed according to organizational procedures.
+
+### Remove or Block Malicious Infrastructure
+
+Previously identified malicious indicators should remain blocked according to organizational policy.
+
+For this investigation, the credential-collection domain identified during analysis was:
+
+`alia[.]typentfs[.]xyz`
+
+The associated `/off.php` endpoint should also be retained as an investigation indicator for correlation with historical or future security telemetry.
+
+### Validate Eradication
+
+After remediation actions are completed, additional searches should be performed to determine whether the identified phishing artifacts or related suspicious activity remain present.
+
+Validation should confirm that:
+
+- Known phishing messages have been addressed.
+- Identified malicious attachments are no longer accessible to affected users.
+- Potentially compromised accounts have been secured.
+- Unauthorized account changes have been removed.
+- Known malicious infrastructure is appropriately blocked.
+- No additional related activity has been identified during follow-up investigation.
+
+### Lab Scope
+
+The available lab evidence demonstrates investigation and identification of phishing artifacts but does not provide access to production mailboxes, identity systems, endpoints, or security gateways.
+
+Therefore, the eradication and remediation actions described in this section represent **recommended SOC response procedures** rather than actions performed against a production environment.
