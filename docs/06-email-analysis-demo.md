@@ -272,7 +272,7 @@ The attachment could potentially contain malicious macros or redirect the recipi
 
 ## Final Outcome
 
-This email analysis exercise demonstrates the ability to review and classify different types of email messages based on observable indicators.
+Once the artifacts, analysis results, screenshots, verdict, and defensive recommendations are documented, the investigation is ready to be incorporated into the final SOC incident report. This email analysis exercise demonstrates the ability to review and classify different types of email messages based on observable indicators.
 
 The four examples included:
 
