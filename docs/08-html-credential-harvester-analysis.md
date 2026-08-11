@@ -57,3 +57,16 @@ PowerShell was used to calculate the SHA256 hash of the suspicious `MICRO.html` 
 The SHA256 hash provides a unique identifier for the attachment and allows the file to be referenced without relying solely on its filename. In a SOC investigation, this value can be used for threat-intelligence searches, reputation checks, file correlation, and comparison against artifacts observed on other systems.
 
 The hash itself does not determine whether the attachment is malicious. It serves as an investigation artifact that can be correlated with additional evidence collected during the analysis.
+
+
+### 3. Attachment File Size
+
+![HTML attachment file size](../evidence/screenshots/html-credential-harvester/03-html-attachment-file-size.png)
+
+The file properties of `MICRO.html` were reviewed to collect additional metadata about the suspicious attachment.
+
+**Observed file size:** `14.6 KB`
+
+Recording the file size provides another identifying characteristic of the attachment and can assist with artifact comparison during an investigation.
+
+File size alone does not indicate whether a file is malicious. It should be considered together with the filename, SHA256 hash, file contents, and observed behavior.
