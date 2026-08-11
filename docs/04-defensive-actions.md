@@ -1,5 +1,9 @@
 # 04 — Defensive Actions
 
+## Scope
+
+The actions in this section represent recommended defensive and incident-response procedures for a production SOC environment. They were developed from the investigation findings but were not performed against production email, identity, endpoint, or network systems during this lab.
+
 ## Recommended Containment
 
 1. Block the confirmed malicious sender address if appropriate to the organization's email-security design.
