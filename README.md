@@ -141,12 +141,27 @@ Together, the static and behavioral evidence supports a **high-confidence malici
 
 **Production compromise:** Not established by the available lab evidence. The analysis confirms malicious functionality but does not establish that real production credentials were submitted or successfully used by an attacker.
 
-
 ## Defensive Response Summary
 
-For a confirmed credential-phishing message, appropriate actions may include blocking the specific malicious sender/URL/domain where business impact is acceptable, searching the mail environment for additional recipients, removing matching messages, reviewing web/DNS/endpoint telemetry for clicks, and reviewing authentication activity when credential submission is possible. If credentials were entered, response should include credential reset, session revocation, MFA review, and follow-on compromise checks according to organizational procedure.
+Following confirmation of the phishing activity, the investigation findings can be used to guide incident-response actions in a production SOC environment.
 
-Do not broadly block a legitimate shared provider simply because one account, subdomain, or path was abused. Use the most specific effective control supported by the evidence.
+Recommended response actions include:
+
+- Search the email environment for additional messages containing matching senders, subjects, URLs, domains, attachment filenames, or hashes.
+- Remove confirmed malicious messages from affected mailboxes.
+- Block confirmed malicious domains, URLs, and other infrastructure using the most appropriate security controls.
+- Search network and endpoint telemetry for communication with identified malicious infrastructure.
+- Identify users who opened the attachment, visited the phishing page, or potentially submitted credentials.
+- Reset passwords and revoke active sessions when credential compromise is suspected or confirmed.
+- Review affected accounts for suspicious authentication activity, MFA changes, mailbox rules, forwarding rules, or other unauthorized modifications.
+- Quarantine or remove identified malicious attachments where appropriate.
+- Continue monitoring affected users and systems for related suspicious activity.
+- Retain confirmed indicators for future detection, correlation, and threat hunting.
+
+These actions represent **recommended production response procedures**. The lab demonstrates phishing investigation and malicious-artifact analysis but does not provide access to production email gateways, identity platforms, endpoint-security systems, or network controls required to perform these actions directly.
+
+For the complete response workflow, see **[Incident Response and Remediation →](docs/09-incident-response-and-remediation.md)**.
+
 
 ## Evidence and Screenshots
 
