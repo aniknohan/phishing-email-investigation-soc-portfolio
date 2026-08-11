@@ -100,3 +100,13 @@ The raw `.eml` file was reviewed and the `To` field was located to identify the 
 **Observed recipient:** `jake.wood@dicksonunited.co.uk`
 
 The recipient address was recorded as part of the message metadata. Identifying the intended recipient helps establish who was targeted by the message and provides context for determining the scope of the phishing investigation.
+
+#### Subject
+
+![Email 1 subject](../evidence/screenshots/manual-artifact-collection/03-email1-subject.png)
+
+The raw `.eml` file was reviewed and the `Subject` field was located to identify the message subject.
+
+**Observed subject:** `Netflix: Suspicious Account Activity`
+
+The subject attempts to create concern by warning the recipient about suspicious activity involving a Netflix account. Security-related subject lines can be used to create urgency and encourage the recipient to interact with the message. This indicator should be evaluated together with the sender, URLs, sending infrastructure, and other email artifacts before reaching a final determination.
