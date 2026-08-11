@@ -89,9 +89,18 @@ phishing-email-investigation-soc-portfolio/
 │
 └── evidence/
     ├── email-samples/
+    │   └── README.md
+    │
     └── screenshots/
         ├── manual-artifact-collection/
-        └── html-credential-harvester/
+        │   └── README.md
+        │
+        ├── html-credential-harvester/
+        │   └── README.md
+        │
+        └── incident-response-remediation/
+            └── README.md
+
 ```
 
 ## Project Documentation
@@ -162,10 +171,24 @@ These actions represent **recommended production response procedures**. The lab 
 
 For the complete response workflow, see **[Incident Response and Remediation →](docs/09-incident-response-and-remediation.md)**.
 
-
 ## Evidence and Screenshots
 
-Investigation evidence is organized by analysis type so that the documented findings can be traced back to supporting screenshots and artifacts.
+Supporting evidence is organized under the `evidence/` directory and is separated by investigation activity.
+
+### Manual Artifact Collection
+
+The `evidence/screenshots/manual-artifact-collection/` directory contains screenshots demonstrating manual extraction and validation of email artifacts, including sender and recipient addresses, subject lines, timestamps, sending IP addresses, reverse DNS information, URLs, attachment information, and file hashes.
+
+### HTML Credential Harvester Analysis
+
+The `evidence/screenshots/html-credential-harvester/` directory contains evidence from the analysis of a malicious HTML attachment, including attachment metadata, SHA256 identification, Microsoft login impersonation, targeted email information, URL decoding, and observed credential-submission network behavior.
+
+### Phishing Investigation and Incident Response
+
+The `evidence/screenshots/incident-response-remediation/` directory contains evidence from the phishing email investigation and subsequent incident-response analysis. This includes raw email header findings, sending infrastructure, suspicious URL extraction, malicious attachment analysis, incident classification, IOC-based scoping, containment recommendations, remediation planning, recovery, post-incident monitoring, and lessons learned.
+
+All screenshots are derived from controlled lab exercises. Sensitive production data, live credentials, and employer or customer information are not included.
+
 
 ### Manual Email Artifact Collection
 
