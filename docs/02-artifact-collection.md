@@ -191,3 +191,16 @@ The raw `.eml` file was opened in Sublime Text and the `From` field was located 
 The sender address was recorded as part of the email metadata for further investigation. Identifying the sender provides an artifact that can be correlated with the sending IP address, email headers, message content, and attachment information.
 
 At this stage, the sender address alone does not establish whether the message is malicious. Additional analysis of the email infrastructure and attachment is required.
+
+
+#### Recipient Address
+
+![Email 2 recipient address](../evidence/screenshots/manual-artifact-collection/10-email2-recipient-address.png)
+
+The raw `.eml` file was reviewed in Sublime Text and the `To` field was located to identify the intended recipient of the message.
+
+**Observed recipient:** `andrewadams112@hotmail.co.uk`
+
+The recipient address was recorded as part of the email metadata. Identifying the intended recipient helps establish who was targeted by the message and provides context for determining the scope of the investigation.
+
+In a production SOC environment, this artifact could also be used to search for related messages, determine whether additional users received the same email, and assess the potential impact of the campaign.
