@@ -96,3 +96,17 @@ The pre-populated email address indicates that the credential-harvesting page wa
 
 This artifact also provides useful investigative context by identifying the account targeted by the phishing attempt. In a SOC investigation, the identified account could be used to scope additional searches for related phishing messages and suspicious authentication activity.
 
+### 6. HTML Source Analysis with CyberChef
+
+![CyberChef URL decoding](../evidence/screenshots/html-credential-harvester/06-cyberchef-url-decoding.png)
+
+The source code of the credential-harvesting page was collected and analyzed using CyberChef. The HTML source was pasted into CyberChef and the `URL Decode` operation was applied to make the encoded content easier to inspect.
+
+The decoded source was then searched for references to `logo` to identify the image resource used by the phishing page.
+
+**Observed Microsoft logo filename:**  
+`microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg`
+
+Identifying the Microsoft-branded resource provides additional evidence that the HTML attachment was designed to imitate a Microsoft authentication page.
+
+This step demonstrates how static source-code analysis can reveal artifacts that may not be immediately visible when viewing the rendered phishing page.
