@@ -217,6 +217,15 @@ Add screenshots to `evidence/screenshots/` showing, where safe and sanitized:
 
 Redact real identities, internal infrastructure, credentials, tokens, and active malicious indicators before publishing screenshots to GitHub.
 
-## Final Outcome
 
-Once the artifacts, analysis results, screenshots, verdict, and defensive recommendations are documented, the investigation is ready to be incorporated into the final SOC incident report.
+## Email 1 Analysis
+
+![Email 1](../evidence/screenshots/email-demo-01-recon-email.png)
+
+The sender name shows **David & Maureen**, but the actual sender email address is **mani78@tin.it**.
+
+The email also uses a different Reply-To address: **david.kms@aol.com**.
+
+The email does not contain a link or attachment. It appears to be trying to get the recipient to reply and start a conversation.
+
+**Verdict: Suspicious — possible reconnaissance email.**
