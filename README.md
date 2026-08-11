@@ -9,7 +9,16 @@ The repository documents multiple phishing-analysis scenarios and shows how evid
 
 ## Scenario
 
-A user reports a suspicious account-security email that attempts to create urgency and directs the recipient to an external login page. The analyst must determine whether the message is legitimate or malicious, identify the relevant indicators of compromise (IOCs), assess potential user exposure, and recommend proportionate response actions.
+This project simulates the investigation of suspicious emails reported to a Security Operations Center (SOC). The analyst is responsible for determining whether the messages are benign, suspicious, or malicious by examining the available email and related artifacts.
+
+The investigation begins with manual analysis of raw `.eml` files to collect key evidence such as sender and recipient addresses, subject lines, timestamps, sending IP addresses, reverse DNS information, URLs, domains, attachment filenames, and cryptographic hashes.
+
+The project then progresses into deeper analysis of suspicious content. This includes examining an HTML attachment that impersonates a Microsoft / Office 365 login page, reviewing its source code, and observing its network behavior in a controlled lab environment. The analysis demonstrates credential-harvesting behavior and identifies associated indicators of compromise.
+
+Finally, the collected evidence is used to document incident classification, IOC-based scoping, containment recommendations, remediation, recovery, post-incident monitoring, and lessons learned.
+
+The goal is to demonstrate an evidence-driven SOC investigation workflow while clearly distinguishing between actions performed in the lab and response actions that would be recommended in a production environment.
+
 
 ## Objectives
 
