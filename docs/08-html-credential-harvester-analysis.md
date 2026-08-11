@@ -134,3 +134,48 @@ The request contains several important artifacts:
 This network behavior provides strong evidence that the HTML attachment functions as a **credential harvester**. Rather than simply displaying a fake Microsoft login page, the form attempts to transmit information entered by the user to external infrastructure.
 
 The URL has been defanged in this documentation to prevent accidental navigation.
+
+-----------
+
+## 8. Key Findings & Indicators of Compromise
+
+The investigation identified multiple artifacts demonstrating that the HTML attachment functions as a credential-harvesting phishing page. Analysis of the attachment, its source code, and its network behavior produced the following key findings.
+
+### Key Findings
+
+- The attachment was identified as `MICROINV-US1070822.html`.
+- The attachment is an HTML document capable of rendering web content locally in a browser.
+- The page impersonates a Microsoft / Office 365 login page to appear legitimate to the targeted user.
+- The phishing page contains the targeted email address `contact@securityblue.team`.
+- Source-code analysis revealed embedded web resources associated with the fake login interface.
+- Controlled credential submission showed that entered credentials were transmitted through an HTTP request to an external domain.
+- The submitted email address and test password were included directly in the request URL.
+- The observed behavior provides strong evidence that the HTML attachment functions as a credential harvester.
+
+### Indicators of Compromise (IOCs)
+
+**Filename:**
+
+`MICROINV-US1070822.html`
+
+**SHA256:**
+
+`0FC57290189ADECFE17F6BACBC515ED080CD63C54B282FDEF4EF3DFC598CDD1E`
+
+**Credential Collection Domain:**
+
+`alia[.]typentfs[.]xyz`
+
+**Credential Collection Endpoint:**
+
+`/off.php`
+
+**Observed Request URL (Defanged):**
+
+`hxxp://alia[.]typentfs[.]xyz/off.php?aaa=contact%40securityblue.team&ooo=test%40email.com&password=test&s1=`
+
+**Targeted Email Address:**
+
+`contact@securityblue.team`
+
+The filename and SHA256 hash can be used for file identification and correlation, while the domain and endpoint can support network-based investigation and threat hunting. The email address and password shown in the request were test values used during controlled analysis and should not be treated as compromised production credentials.
