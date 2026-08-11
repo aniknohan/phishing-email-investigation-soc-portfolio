@@ -255,3 +255,17 @@ During the initial review, the message does not show clear suspicious or malicio
 Based on the content and purpose of the message, it is more consistent with unsolicited promotional spam or junk mail rather than a malicious phishing attempt.
 
 **Verdict: Non-malicious — spam / junk email.**
+
+## Email 4 Analysis
+
+![Email 4](../evidence/screenshots/email-demo-04-malicious-attachment.png)
+
+The email uses an urgent subject line claiming that an unpaid invoice must be paid or the recipient's account will be suspended.
+
+The sender uses a Gmail address while claiming to represent the **Finance and Collection Department** of a company. This mismatch makes the sender suspicious.
+
+The email also contains a **DOCX attachment** and attempts to convince the recipient to open it by claiming that additional financial charges will occur if payment is delayed.
+
+The attachment could potentially contain malicious macros or redirect the recipient to a malicious website. The attachment should not be opened until it has been safely analyzed.
+
+**Verdict: Malicious — suspected phishing email with a potentially malicious attachment.**
