@@ -258,6 +258,12 @@ The project also demonstrates the distinction between **observed evidence** and 
 
 Overall, the project demonstrates practical experience with **phishing investigation, IOC extraction, evidence correlation, malicious HTML analysis, network-request analysis, MITRE ATT&CK mapping, incident-response methodology, and technical security documentation**.
 
+## Author
+
+**Anik Nohan**
+
+Cybersecurity | SOC Analysis | Blue Team | Phishing Email Investigation
+
 ## Disclaimer
 
 This repository is for defensive cybersecurity education and portfolio demonstration only. Do not execute suspicious attachments or directly browse suspicious links from a production workstation. Follow your organization’s policies and use isolated, authorized analysis environments.
