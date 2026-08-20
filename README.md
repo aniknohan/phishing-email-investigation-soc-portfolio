@@ -262,7 +262,25 @@ Overall, the project demonstrates practical experience with **phishing investiga
 
 **Anik Nohan**
 
-Cybersecurity | SOC Analysis | Blue Team | Phishing Email Investigation
+This hands-on Phishing Email Investigation — SOC Analyst Portfolio was completed to demonstrate practical skills in:
+
+- Phishing email triage and investigation
+- Raw `.eml` and email header analysis
+- Sender infrastructure investigation
+- URL and domain analysis
+- Attachment analysis and cryptographic hashing
+- IOC extraction and evidence correlation
+- HTML credential-harvester analysis
+- Browser network-request analysis
+- MITRE ATT&CK mapping
+- Incident-response and remediation planning
+- SOC investigation documentation
+
+### Tools Used
+
+`Sublime Text` • `Mozilla Thunderbird` • `PowerShell` • `DomainTools` • `CyberChef` • `Google Chrome Developer Tools` • `MITRE ATT&CK` • `GitHub`
+
+---
 
 ## Disclaimer
 
